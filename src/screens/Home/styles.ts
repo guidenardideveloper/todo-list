@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
 
   secondaryContainer: {
     height: '100%',
-    backgroundColor: '#333333',
+    backgroundColor: '#1a1a1a',
   },
 
   formContainer: {
@@ -41,6 +41,8 @@ export const styles = StyleSheet.create({
     width: 52,
     height: 52,
     backgroundColor: '#1E6F9F',
-    borderRadius: 6
+    borderRadius: 6,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
