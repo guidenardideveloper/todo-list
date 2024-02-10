@@ -3,6 +3,7 @@ import { styles } from './styles';
 import { View, Image, SafeAreaView, TextInput, TouchableOpacity, FlatList } from "react-native";
 import { Feather } from '@expo/vector-icons'
 import { Counter } from "../../components/counter";
+import { ListEmpty } from "../../components/list-empty";
 
 export function Home() {
   return (
@@ -27,6 +28,7 @@ export function Home() {
         </View>
 
         <Counter/>
+        <ListEmpty/>
       </View>
     </SafeAreaView>
   )
