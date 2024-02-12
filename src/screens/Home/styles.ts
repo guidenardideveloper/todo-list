@@ -15,11 +15,11 @@ export const styles = StyleSheet.create({
   secondaryContainer: {
     height: '100%',
     backgroundColor: '#1a1a1a',
+    alignItems: 'center',
   },
 
   formContainer: {
     width: 327,
-    alignSelf: 'center',
     flexDirection: 'row',
     alignItems: 'center',
     gap: 4,
