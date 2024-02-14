@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
     paddingLeft: 15,
     paddingBottom: 12,
     borderRadius: 8,
+    marginBottom: 8,
   },
   trashBtn: {
     justifyContent: 'center',

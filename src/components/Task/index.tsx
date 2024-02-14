@@ -6,10 +6,17 @@ import { Feather } from '@expo/vector-icons';
 
 type TaskProps = {
   text: string;
+  onRemove: () => void;
+  onCheck: (checked: boolean) => void;
 }
 
-export function Task({ text }: TaskProps) {
+export function Task({ text, onRemove, onCheck }: TaskProps) {
   const [checkboxState, setCheckboxState] = useState(false);
+
+  function countConcluded() {
+    setCheckboxState(!checkboxState)
+    onCheck(!checkboxState)
+  }
   
   return (
     <View style={styles.container}>
@@ -24,9 +31,9 @@ export function Task({ text }: TaskProps) {
           color: checkboxState ? '#808080' : '#f2f2f2',
         }}
         isChecked={checkboxState}
-        onPress={() => setCheckboxState(!checkboxState)}
+        onPress={countConcluded}
       />
-      <TouchableOpacity style={styles.trashBtn}>
+      <TouchableOpacity style={styles.trashBtn} onPress={onRemove}>
         <Feather name='trash-2' size={20} style={styles.trashIcon}/>
       </TouchableOpacity>
     </View>

@@ -45,4 +45,10 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  listContainer: {
+    height: 520,
+    marginTop: 32,
+    gap: 20,
+  }
 });

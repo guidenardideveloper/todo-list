@@ -1,7 +1,12 @@
 import { View, Text } from "react-native";
 import { styles } from './styles';
 
-export function Counter() {
+type PropsCounter = {
+  createdNumber: number;
+  completedNumber: number;
+}
+
+export function Counter({createdNumber, completedNumber}:PropsCounter) {
   return (
     <View style={styles.container}>
       <View style={styles.createContainer}>
@@ -10,7 +15,7 @@ export function Counter() {
         </Text>
         <View style={styles.containerCount}>
           <Text style={styles.textCount}>
-            0
+            {createdNumber}
           </Text>
         </View>
       </View>
@@ -21,7 +26,7 @@ export function Counter() {
         </Text>
         <View style={styles.containerCount}>
           <Text style={styles.textCount}>
-            0
+            {completedNumber}
           </Text>
         </View>
       </View>
