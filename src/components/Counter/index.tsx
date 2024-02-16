@@ -1,34 +1,20 @@
 import { View, Text } from "react-native";
 import { styles } from './styles';
 
-type PropsCounter = {
-  createdNumber: number;
-  completedNumber: number;
+type CounterProps = {
+  title: string;
+  color: string;
+  quantity: number;
 }
 
-export function Counter({createdNumber, completedNumber}:PropsCounter) {
-  return (
-    <View style={styles.container}>
-      <View style={styles.createContainer}>
-        <Text style={styles.createText}>
-          Criadas
-        </Text>
-        <View style={styles.containerCount}>
-          <Text style={styles.textCount}>
-            {createdNumber}
-          </Text>
-        </View>
-      </View>
+export function Counter({ title, color, quantity }: CounterProps) {
+  const style = styles({ color });
 
-      <View style={styles.concludedContainer}>
-        <Text style={styles.concludedText}>
-          Concluídas
-        </Text>
-        <View style={styles.containerCount}>
-          <Text style={styles.textCount}>
-            {completedNumber}
-          </Text>
-        </View>
+  return (
+    <View style={style.container}>
+      <Text style={style.title}>{title}</Text>
+      <View style={style.quantityContainer}>
+        <Text style={style.quantity}>{quantity}</Text>
       </View>
     </View>
   )

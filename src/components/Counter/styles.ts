@@ -1,51 +1,31 @@
 import { StyleSheet } from "react-native";
 
-export const styles = StyleSheet.create({
+type StylesProps = {
+  color: string;
+}
+
+export const styles = (props?: StylesProps) => StyleSheet.create({
   container: {
-    width: 327,
-    alignSelf: 'center',
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  },
-
-  createContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
-    gap: 8
   },
-
-  createText: {
-    fontSize: 14,
+  title: {
     fontWeight: 'bold',
-    color: '#4EA8DE'
+    fontSize: 16,
+    color: props?.color,
+    marginRight: 8,
   },
-
-  containerCount: {
-    paddingTop: 2,
-    paddingBottom: 2,
-    paddingRight: 8,
-    paddingLeft: 8,
+  quantityContainer: {
+    width: 25,
+    height: 19,
+    borderRadius: 999,
+    alignItems: 'center',
+    justifyContent: 'center',
     backgroundColor: '#333333',
-    borderRadius: 9,
   },
-
-  textCount: {
+  quantity: {
+    fontWeight: 'bold',
     fontSize: 12,
-    fontWeight: 'bold',
-    color: '#f2f2f2'
-  },
-
-  concludedContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 8,
-  },
-
-  concludedText: {
-    fontSize: 14,
-    fontWeight: 'bold',
-    color: '#8284FA'
-  },
-})
+    color: '#d9d9d9'
+  }
+});

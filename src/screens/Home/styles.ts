@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
-  primaryContainer: {
+    primaryContainer: {
     height: 173,
     backgroundColor: '#0d0d0d',
     alignItems: 'center',
@@ -46,9 +46,17 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
+  containerCounter: {
+    width: 327,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignSelf: 'center',
+    marginBottom: 20
+  },
+  
   listContainer: {
     height: 520,
     marginTop: 32,
     gap: 20,
-  }
+  },
 });
